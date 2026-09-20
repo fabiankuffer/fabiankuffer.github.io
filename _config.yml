@@ -99,3 +99,4 @@ exclude:
   - README.md
   - THEME_SOURCE.md
   - licenses
+  - DEPENDENCIES.md

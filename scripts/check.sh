@@ -10,6 +10,8 @@ echo "Prüfe die generierte Website ..."
 # HTML-Seiten
 test -f _site/index.html
 test -f _site/archive.html
+test -f _site/impressum.html
+test -f _site/datenschutz.html
 
 # RSS / Atom
 test -f _site/feed.xml
