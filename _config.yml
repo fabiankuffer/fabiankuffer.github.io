@@ -16,7 +16,7 @@ timezone: Europe/Berlin
 # URL und Domain
 # ----------------------------------
 
-url: "https://fabiankuffer.github.io"
+url: "https://blog.fabiankuffer.de"
 baseurl: ""
 
 permalink: /:year/:month/:day/:title/
