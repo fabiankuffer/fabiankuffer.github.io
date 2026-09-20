@@ -1,20 +1,18 @@
 
 entries:
   - title: Posts
-    post_list:
-      limit: 10
-      show_more: true
-      show_more_text: Alle Posts
-      show_more_url: /archive.html
+    post_list: true
 
-  - title: RSS / Atom
-    url: /feed.xml
+  - title: Links
+    entries:
+      - title: RSS / Atom
+        url: /feed.xml
     
-  - title: GitHub
-    url: https://github.com/fabiankuffer
+      - title: GitHub
+        url: https://github.com/fabiankuffer
     
-  - title: Impressum
-    url: /impressum.html
+      - title: Impressum
+        url: /impressum.html
 
-  - title: Datenschutz
-    url: /datenschutz.html
+      - title: Datenschutz
+        url: /datenschutz.html
