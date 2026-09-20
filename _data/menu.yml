@@ -1,0 +1,14 @@
+
+entries:
+  - title: Blog
+    post_list:
+      limit: 10
+      show_more: true
+      show_more_text: Alle Artikel
+      show_more_url: /archive.html
+
+  - title: RSS / Atom
+    url: /feed.xml
+
+  - title: GitHub
+    url: https://github.com/fabiankuffer

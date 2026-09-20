@@ -1,0 +1,26 @@
+
+# Generierte Website
+_site/
+
+# Jekyll-Caches
+.jekyll-cache/
+.jekyll-metadata
+.jektex-cache/
+.sass-cache/
+
+# Lokale Ruby-Installation
+.bundle/
+vendor/bundle/
+
+# Editor und Betriebssystem
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Lokale Zugangsdaten
+.env
+.env.*
+*.pem
+*.key

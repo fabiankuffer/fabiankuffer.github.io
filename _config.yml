@@ -1,0 +1,101 @@
+
+# ----------------------------------
+# Allgemeine Einstellungen
+# ----------------------------------
+
+title: Blog
+description: ""
+
+author:
+  name: Fabian Kuffer
+
+lang: de
+timezone: Europe/Berlin
+
+# ----------------------------------
+# URL und Domain
+# ----------------------------------
+
+url: "https://fabiankuffer.github.io"
+baseurl: ""
+
+permalink: /:year/:month/:day/:title/
+
+# ----------------------------------
+# Theme
+# ----------------------------------
+
+favicon: /logo.png
+
+theme_config:
+  appearance: auto
+  back_home_text: ".."
+  date_format: "%d.%m.%Y"
+  show_description: true
+  lowercase_titles: false
+
+# ----------------------------------
+# Markdown und CSS
+# ----------------------------------
+
+markdown: kramdown
+
+sass:
+  style: compressed
+
+# ----------------------------------
+# Jekyll-Plugins
+# ----------------------------------
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jektex
+
+# ----------------------------------
+# RSS / Atom
+# ----------------------------------
+
+feed:
+  path: /feed.xml
+
+# ----------------------------------
+# Mathematische Formeln
+# ----------------------------------
+
+jektex:
+  cache_dir: ".jektex-cache"
+
+  ignore:
+    - "*.xml"
+
+  silent: false
+
+  katex_options:
+    trust: false
+    output: htmlAndMathml
+
+  macros:
+    - ["\\Q", "\\mathbb{Q}"]
+    - ["\\C", "\\mathbb{C}"]
+
+# ----------------------------------
+# Nicht veröffentlichte Dateien
+# ----------------------------------
+
+exclude:
+  - vendor
+  - scripts
+  - deploy
+  - .bundle
+  - .github
+  - .gitignore
+  - .ruby-version
+  - .jektex-cache
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - README.md
+  - THEME_SOURCE.md
+  - licenses

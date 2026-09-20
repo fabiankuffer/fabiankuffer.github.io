@@ -1,0 +1,79 @@
+
+name: Build and deploy blog
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Jekyll blog
+
+    runs-on: ubuntu-24.04
+
+    steps:
+      # Repository herunterladen
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Ruby bereitstellen
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: false
+
+      # Node.js für Jektex / ExecJS
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # GitHub Pages vorbereiten
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      # Unser eigenes Build-Skript
+      - name: Build website
+        run: ./scripts/build.sh
+
+      # RSS, SEO, KaTeX und HTML prüfen
+      - name: Check generated website
+        run: ./scripts/check.sh
+
+      # Fertige Website hochladen
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+  deploy:
+    name: Deploy website
+
+    needs: build
+
+    runs-on: ubuntu-24.04
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
