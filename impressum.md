@@ -8,8 +8,8 @@ permalink: /impressum.html
 
 **Anbieter dieses Internetangebots**
 
-Fabian Kuffer
-Holzgartenstr. 18
+Fabian Kuffer  
+Holzgartenstr. 18  
 85354 Freising
 
 **Kontakt**

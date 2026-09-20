@@ -11,6 +11,7 @@ author:
 
 lang: de
 timezone: Europe/Berlin
+show_drafts: false
 
 # ----------------------------------
 # URL und Domain
